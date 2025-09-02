@@ -12,6 +12,16 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "IEryxFIcbZnooPeMT",
+      });
+   })();
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -42,49 +52,216 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h3>Featured Projects</h3>
-    <div class="project_btn">
-      <button>All</button>
-      <button>Web</button>
-      <button>E-commerce</button>
-      <button>Tools</button>
+ <section id="projects">
+  <h2>Featured Projects</h2>
+
+  <div class="button">
+    <button class="project_btn">All</button>
+    <button class="project_btn">Web</button>
+    <button class="project_btn">E-commerce</button>
+    <button class="project_btn">Tools</button>
+  </div>
+
+  <div class="projects">
+    <div class="outer_project">
+      <img src="amzonHome.png" alt="amzon_page">
+      <h3 class="outer_project_h3">Amazon Clone</h3>
+      <div class="tech-stack">
+        <span>Html</span>
+        <span>CSS</span>
+        <span>Javascript</span>
+      </div>
+      <p class="tech-stack_p">Developed an Amazon clone with product listings, shopping cart, and responsive UI.</p>
+      <div class="project_link">
+        <a href="#">Live Demo</a>
+        <a href="#">GitHub</a>
+      </div>
     </div>
-    <div class="projects">
-      <div class="Amazon_clone">
-        <img id="image" src="amzonHome.png" alt="amzon_page">
-        <h3>Amazon Clone</h3>
-        <span id="skill_ele">Html CSS Javascrit</span>
-        <p>Developed an Amazon clone with product listings, shopping cart, and responsive UI for a seamless e-commerce experience.
-        </p>
-        <div class="project_link">
-          <a href="#">Live Demo</a>
-          <a href="#">GitHub</a>
-        </div>
+
+    <div class="outer_project">
+      <img src="APl.png" alt="APlPrototype_image">
+      <h3 class="outer_project_h3">Word Definition App</h3>
+      <div class="tech-stack">
+        <span>Html</span>
+        <span>CSS</span>
+        <span>Javascript</span>
       </div>
-      <div class="APl_project">
-        <img id="image" src="APl.png" alt="APlPrototype_image">
-        <h3>Amazon Clone</h3>
-        <span>Html CSS Javascrit</span>
-        <p>Developed an Amazon clone with product listings, shopping cart, and responsive UI for a seamless e-commerce experience.
-        </p>
-        <div class="project_link">
-          <a href="#">Live Demo</a>
-          <a href="#">GitHub</a>
+      <p class="tech-stack_p">Lets users type any word and instantly shows its meaning with a simple interface.</p>
+      <div class="project_link">
+        <a href="#">Live Demo</a>
+        <a href="#">GitHub</a>
       </div>
-        </div>
-      <div class="simon_say">
-      <img id="image" src="simon says.png" alt="simonHome_page">
-      <h3>Amazon Clone</h3>
-        <span>Html CSS Javascrit</span>
-        <p>Developed an Amazon clone with product listings, shopping cart, and responsive UI for a seamless e-commerce experience.
-        </p>
-        <div class="project_link">
-          <a href="#">Live Demo</a>
-          <a href="#">GitHub</a>
-          </div>
-  
+    </div>
+
+    <div class="outer_project">
+      <img src="simon says.png" alt="simonHome_page">
+      <h3 class="outer_project_h3">Simon Game</h3>
+      <div class="tech-stack">
+        <span>Html</span>
+        <span>CSS</span>
+        <span>Javascript</span>
+      </div>
+      <p class="tech-stack_p">A memory challenge where players follow and repeat growing color sequences.</p>
+      <div class="project_link">
+        <a href="#">Live Demo</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Technical Section -->
+  <section class="section_Technical_skills">
+     <h2>Technical skills</h2>
+    <div class="Technical_skills">
+      <!-- HTML -->
+    <div class="outer">
+      <div class="tech-icon"><i class="fa-brands fa-html5"></i></div>
+      <div class="tech-info">
+        <h3>HTML</h3>
+        <div class="persentage_bar"></div>
+        <span>95%</span>
+      </div>
+    </div>
+    <!-- CSS -->
+     <div class="outer">
+      <div class="tech-icon"><i class="fa-brands fa-css3-alt"></i></div>
+      <div class="tech-info">
+        <h3>CSS</h3>
+        <div class="persentage_bar"></div>
+        <span>95%</span>
+      </div>
+    </div>
+    <!-- JAVASCRIT -->
+     <div class="outer">
+      <div class="tech-icon"><i class="fa-brands fa-js"></i></div>
+      <div class="tech-info">
+        <h3>JAVASCRIT</h3>
+        <div class="persentage_bar"></div>
+        <span>95%</span>
+      </div>
+      <!-- C++ -->
+    </div>
+     <div class="outer">
+      <div class="tech-icon"><i class="fa-sharp fa-regular fa-c"></i></i></div>
+      <div class="tech-info">
+        <h3> C++</h3>
+        <div class="persentage_bar"></div>
+        <span>95%</span>
+      </div>
+    </div>
+    <!-- JAVA -->
+     <div class="outer">
+      <div class="tech-icon"><i class="fa-brands fa-java"></i></div>
+      <div class="tech-info">
+        <h3>JAVA</h3>
+        <div class="persentage_bar"></div>
+        <span>95%</span>
+      </div>
+    </div>
+   <!-- GITHUB -->
+     <div class="outer">
+      <div class="tech-icon"><i class="fa-brands fa-github"></i></div>
+      <div class="tech-info">
+        <h3>GIHUB</h3>
+        <div class="persentage_bar"></div>
+        <span>95%</span>
+      </div>
+    </div>
+    </div>
   </section>
+
+  <!-- Professional Experience -->
+   
+   <section class="Professional-Exprience">
+    <h2>Professional Experience</h2>
+   <div class="outer-experience">
+    <div class="inner-experience">
+      <h3 class="inner-h3">Hackathon Participant</h3>
+      <p class="inner-p">Hackron २४ Horse Hackathon</p>
+      <p class="inner-date">March 5-6,2025</p>
+      <p class="inner-p">Participated in a 24-hour hackathon with Team Tech Panthers. Built a Heatmap-Based Store Placement Analysis tool using data science</p>
+    </div>
+    <div class="inner-experience">
+      <h3 class="inner-h3">Hackathon Participant</h3>
+      <p class="inner-p">Hackron २४ Horse Hackathon</p>
+      <p class="inner-date">March 5-6,2025</p>
+      <p class="inner-p">Participated in a 24-hour hackathon with Team Tech Panthers. Built a Heatmap-Based Store Placement Analysis tool using data science</p>
+    </div>
+    <div class="inner-experience">
+    <h3 class="inner-h3">Hackathon Participant</h3>
+      <p class="inner-p">Hackron २४ Horse Hackathon</p>
+      <p class="inner-date" >March 5-6,2025</p>
+      <p class="inner-p">Participated in a 24-hour hackathon with Team Tech Panthers. Built a Heatmap-Based Store Placement Analysis tool using data science</p>
+    </div>
+    <div class="inner-experience"><h3 class="inner-h3">Hackathon Participant</h3>
+      <p class="inner-p">Hackron २४ Horse Hackathon</p>
+      <p class="inner-date">March 5-6,2025</p>
+      <p class="inner-p">Participated in a 24-hour hackathon with Team Tech Panthers. Built a Heatmap-Based Store Placement Analysis tool using data science</p>
+    </div>
+   </div>
+   </section>
+
+   <!-- Achievements & Certifications -->
+    <section class="Achievements_Certifications">
+      <h2>Achievements & Certifications</h2>
+      <div class="outer-cer">
+        <div class="inner-cer">
+          <div class="achievement-icon"><i class="fa-solid fa-trophy" ></i></div>
+          <h3 class="achievement-h3">Hackathon Participation</h3>
+          <p class="achievement-date">2025</p>
+          <p class="achievement-p">Participated in multiple hackathons including Hackron २४ Horse Hackathon and Orchathon 2k25, showcasing problem-solving and teamwork skills</p>
+          <a href="#" download class="download_btn">Download Certificate</a>
+        </div>
+         <div class="inner-cer">
+          <div class="achievement-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3 class="achievement-h3">Computer Engineering</h3>
+          <p class="achievement-date">2025</p>
+          <p class="achievement-p">Pursuing Computer Engineering at Dattakala Group of Institutions, focusing on web development, cybersecurity, and software engineering.</p>
+          <a href="#" download class="download_btn">Download Certificate</a>
+        </div>
+         <div class="inner-cer">
+          <div class="achievement-icon"><i class="fa-solid fa-users-line"></i></div>
+          <h3 class="achievement-h3">Tech Event Participation</h3>
+          <p class="achievement-date">2025</p>
+          <p class="achievement-p">Actively participated in Nirmaan 3.0 hosted by GDGOC MIT AOE, demonstrating innovation and technical collaboration skills.</p>
+          <a href="#" download class="download_btn">Download Certificate</a>
+        </div>
+         <div class="inner-cer">
+          <div class="achievement-icon"><i class="fa-solid fa-industry"></i></div>
+          <h3 class="achievement-h3">Internship Oracal</h3>
+          <p class="achievement-date">----</p>
+          <p class="achievement-p">My upcoming dream is to secure an internship opportunity at Oracle, where I can contribute my technical skills, learn from industry experts, and gain real-world experience in enterprise solutions and innovative technologies.</p>
+          <a href="#" download class="download_btn">Download Certificate</a>
+        </div>
+      </div>
+    </section>
+    <!-- contact Me -->
+     <section id="contact" class="container">
+      <h2>Contact Me</h2>
+     <div class="outer-contact">
+      <form >
+        <div class="from-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div class="from-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="from-group">
+          <label for="subject">Subject</label>
+          <input type="text" name="subject" id="subject" required>
+        </div>
+        <div class="from-group">
+           <label for="message">Message</label>
+         <textarea name="message" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" onclick="sentMail()">Send</button>
+      </form>
+     </div>
+     </section>
 
   <!-- Footer -->
   <footer id="contact">

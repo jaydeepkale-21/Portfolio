@@ -14,4 +14,21 @@
   }
 
   setInterval(changeRole, 2000); // change every 2 seconds
+function SentMail() {
+  let parms = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value
+  };
 
+  emailjs.send("service_gnu221n", "template_8pu11be", parms)
+    .then(function(response) {
+      alert("✅ Email sent successfully!");
+      console.log("SUCCESS", response);
+    }, function(error) {
+      alert("❌ Failed to send email. Please try again.");
+      console.error("FAILED", error);
+    });
+}
+emailjs.init("IEryxFIcbZnooPeMT"); 
