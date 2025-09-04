@@ -31,7 +31,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     message: this.message.value
   })
   .then(() => {
-    document.getElementById("status-message").innerText = "✅ Message sent successfully!";
+    document.getElementById("status-message").innerText = alert("✅ Message sent successfully!");
     this.reset();
   }, (error) => {
     document.getElementById("status-message").innerText = "❌ Failed to send message.";
