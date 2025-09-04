@@ -1,3 +1,4 @@
+  
   const roles = [
     "Front-end Developer",
     "Computer Engineer",
@@ -14,21 +15,62 @@
   }
 
   setInterval(changeRole, 2000); // change every 2 seconds
-function SentMail() {
-  let parms = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value
-  };
 
-  emailjs.send("service_gnu221n", "template_8pu11be", parms)
-    .then(function(response) {
-      alert("✅ Email sent successfully!");
-      console.log("SUCCESS", response);
-    }, function(error) {
-      alert("❌ Failed to send email. Please try again.");
-      console.error("FAILED", error);
-    });
+  // mail function
+// Initialize EmailJS with your PUBLIC key
+(function () {
+  emailjs.init("IEryxFIcbZnooPeMT"); // <-- replace with your public key from EmailJS
+})();
+
+const form = document.getElementById("contact-form");
+const statusEl = document.getElementById("status");
+const sendBtn = document.getElementById("sendBtn");
+
+function setStatus(text, ok) {
+  statusEl.textContent = text || "";
+  statusEl.className = "msg " + (ok ? "ok" : "err");
 }
-emailjs.init("IEryxFIcbZnooPeMT"); 
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  setStatus("", true);
+
+  // Honeypot check
+  if (document.getElementById("company").value) {
+    setStatus("Blocked suspicious submission.", false);
+    return;
+  }
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !message) {
+    setStatus("Please fill all fields.", false);
+    return;
+  }
+
+  // Disable button while sending
+  sendBtn.disabled = true;
+  sendBtn.textContent = "Sending...";
+
+  try {
+    await emailjs.send(
+      "service_gnu221n",       // <-- replace with your Service ID
+      "template_8pu11be",      // <-- replace with your Template ID
+      { name, email, message } // must match EmailJS template variables
+    );
+
+    setStatus("✅ Message sent successfully!", true);
+    form.reset();
+  } catch (error) {
+    console.error("EmailJS error:", error);
+    const msg = (error && error.text) ? error.text : "Something went wrong.";
+    setStatus("❌ Failed to send: " + msg, false);
+  } finally {
+    sendBtn.disabled = false;
+    sendBtn.textContent = "Send Message";
+  }
+});
+
+

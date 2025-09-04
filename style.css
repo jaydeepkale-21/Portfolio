@@ -398,82 +398,71 @@ margin-top: 20px;
 /* contect me */
 
 /* Contact Section */
-#contact {
-  padding: 60px 20px;
-  background: #f4f4f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+/* Form Container */
+
+.form-container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  /* display: flex;
+  align-content:  center;
+  justify-content: center; */
+  /* margin-left:50% ; */
 }
 
-#contact h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
+.form-container h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
   color: #333;
 }
+.outer-contact{
+  display:flex ;
+  justify-content: center;
+  margin-top: 100px;
+}
 
-/* Form Container */
-.outer-contact {
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+/* Inputs */
+form input, 
+form textarea {
   width: 100%;
-}
-
-/* Form Groups */
-.from-group {
-  margin-bottom: 15px;
-}
-#contact{
-  background-color: #1C1A19;
-    border-bottom:3px solid #1F1F1F ;
-}
-
-.from-group label {
-  display: block;
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 5px;
-}
-
-.from-group input,
-.from-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   font-size: 14px;
   outline: none;
   transition: 0.3s;
 }
 
-.from-group input:focus,
-.from-group textarea:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0,123,255,0.3);
-}
-
-.from-group textarea {
-  resize: none;
+form input:focus, 
+form textarea:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74,144,226,0.3);
 }
 
 /* Button */
-#contact button {
+form button {
   width: 100%;
   padding: 12px;
+  background: #4a90e2;
+  color: white;
   border: none;
-  border-radius: 6px;
-  background: #007bff;
-  color: #fff;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 15px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s ease;
 }
 
-#contact button:hover {
-  background: #0056b3;
+form button:hover {
+  background: #357ab7;
+}
+
+/* Status Message */
+#status-message {
+  margin-top: 10px;
+  font-size: 14px;
 }
